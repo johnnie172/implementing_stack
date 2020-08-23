@@ -49,11 +49,11 @@ class Stack:
         while current_node:
             count_nodes += 1
             current_node = current_node.next
-        print("You have " + str(current_node) + " items in the list.")
+        print("You have " + str(count_nodes) + " items in the list.")
         return count_nodes
 
     def is_empty(self):
-        return self.top_node is not None
+        return self.top_node is None
 
     def getmin(self):
         if self.top_node is None:
@@ -64,4 +64,4 @@ class Stack:
             if current_node.value < min.value:
                 min = current_node
             current_node = current_node.next
-        return min
+        return min.value
